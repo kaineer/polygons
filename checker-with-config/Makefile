@@ -6,7 +6,7 @@ config:
 	mkdir -p config
 
 dependencies:
-	cd foo-checks && ${PM} install
+	cd foo-checks && ${PM} install && cd ../runner && ${PM} install
 
 run:
 	cd runner && node ./index.js
