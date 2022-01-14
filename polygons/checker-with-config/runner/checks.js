@@ -18,20 +18,18 @@ const runChecks = () => {
     tmpDir
   });
 
-  return checker.check({
-    projectPath: correctProjectPath,
+  const display = (results) => console.log({results});
+  const runCheck = (projectPath) => checker.check({
+    projectPath,
     checks,
     filesPath: "",
     imageMagickCompareBinPath: ""
-  }).then((results) => console.log({ results }))
-  .then(() => {
-    return checker.check({
-      projectPath: incorrectProjectPath,
-      checks,
-      filesPath: "",
-      imageMagickCompareBinPath: ""
-    })
-  }).then((results) => console.log({ results }));
+  });
+
+  return runCheck(correctProjectPath)
+    .then(display)
+    .then(() => runCheck(incorrectProjectPath))
+    .then(display);
 };
 
 module.exports = {
