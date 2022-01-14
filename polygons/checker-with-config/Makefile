@@ -1,4 +1,4 @@
-PM=npm
+PM=pnpm
 NPM_DIRS=foo-checks runner
 
 all: config build-ts dependencies run
