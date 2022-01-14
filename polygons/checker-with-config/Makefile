@@ -12,4 +12,4 @@ run:
 	cd runner && node ./index.js
 
 clean:
-	cd foo-checks && rm -rf node_modules *-lock.*
+	rm -rf {foo-checks,runner}/{node_modules,*-lock.*}

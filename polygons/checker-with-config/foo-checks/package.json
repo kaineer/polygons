@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@htmlacademy/checker": "1.0.12"
+    "@htmlacademy/checker": "1.0.12",
+    "@htmlacademy/autochecks-skeleton": "1.0.2"
   }
 }
