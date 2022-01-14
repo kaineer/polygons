@@ -1,11 +1,8 @@
 // dist/checks/hello/index.js
 
-const {
-  CommonHtmlCheck,
-  QueryMethods
-} = require("@htmlacademy/autochecks-skeleton");
+const { CommonHtmlCheck } = require("@htmlacademy/autochecks-skeleton");
 
-export default class HelloCheck extends CommonHtmlCheck {
+module.exports = class HelloCheck extends CommonHtmlCheck {
   getMessages() {
     return {
       title: "index.html should have charset meta",
