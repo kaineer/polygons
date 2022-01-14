@@ -10,7 +10,8 @@ const checks = [
 
 const runChecks = () => {
   const tmpDir = join(__dirname, "tmp");
-  const projectPath = join(__dirname, "../projects/incorrect");
+  const correctProjectPath = join(__dirname, "../projects/correct");
+  const incorrectProjectPath = join(__dirname, "../projects/incorrect");
 
   const checker = new Checker({
     configPath,
@@ -18,10 +19,18 @@ const runChecks = () => {
   });
 
   return checker.check({
-    projectPath,
+    projectPath: correctProjectPath,
     checks,
     filesPath: "",
     imageMagickCompareBinPath: ""
+  }).then((results) => console.log({ results }))
+  .then(() => {
+    return checker.check({
+      projectPath: incorrectProjectPath,
+      checks,
+      filesPath: "",
+      imageMagickCompareBinPath: ""
+    })
   }).then((results) => console.log({ results }));
 };
 
