@@ -18,7 +18,10 @@ const runChecks = () => {
     tmpDir
   });
 
-  const display = (results) => console.log({results});
+  const display = (title) => (results) => {
+    console.log("\n*** " + title);
+    console.log(JSON.stringify(results, null, 2));
+  }
   const runCheck = (projectPath) => checker.check({
     projectPath,
     checks,
@@ -27,9 +30,9 @@ const runChecks = () => {
   });
 
   return runCheck(correctProjectPath)
-    .then(display)
+    .then(display("Correct project"))
     .then(() => runCheck(incorrectProjectPath))
-    .then(display);
+    .then(display("Incorrect project"));
 };
 
 module.exports = {
