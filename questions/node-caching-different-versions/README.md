@@ -12,26 +12,22 @@
 
 # TLDR
 
-Запускаем make, смотрим что выведет в последних 4 строках.
+Запускаем `make`, смотрим что выведет в последних 4 строках.
 
 ## Всё хорошо
 
 ```
-cd root && node . && cd -
 version is 1.0.0
 version is 2.0.0
 version is 1.0.0
 version is 2.0.0
-…
 ```
 
 ## Всё совсем не хорошо
 
 ```
-cd root && node . && cd -
 version is 1.0.0
 version is 1.0.0
 version is 1.0.0
 version is 1.0.0
-…
 ```
