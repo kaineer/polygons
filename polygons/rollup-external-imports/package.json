@@ -1,0 +1,21 @@
+{
+  "name": "rollup-external-imports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-legacy": "2.2.0",
+    "@rollup/plugin-virtual": "2.0.3",
+    "rollup": "2.66.1"
+  },
+  "dependencies": {
+    "fs-extra": "10.0.0"
+  }
+}

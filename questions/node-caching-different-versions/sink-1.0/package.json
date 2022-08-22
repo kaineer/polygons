@@ -1,0 +1,12 @@
+{
+  "name": "versioning-sink-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "versioning-target": "link:../target-1.0"
+  }
+}

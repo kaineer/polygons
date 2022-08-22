@@ -1,0 +1,9 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "versioning-sink-1": "link:../sink-1.0",
+    "versioning-sink-2": "link:../sink-2.0"
+  }
+}
