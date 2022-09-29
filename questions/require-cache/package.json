@@ -1,0 +1,14 @@
+{
+  "name": "@kaineer/require-cache",
+  "version": "1.0.0",
+  "description": "* Что будет, если почистить кэш require() для модуля  * Очистятся ли модули, которые были втянуты из этого модуля  * Перегрузятся ли неочищенные модули",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "10.1.0"
+  }
+}

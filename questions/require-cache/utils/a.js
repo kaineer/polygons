@@ -1,0 +1,1 @@
+module.exports = { f: require('./b.js').f }
