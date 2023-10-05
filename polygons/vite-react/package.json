@@ -4,16 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run patch && vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "patch": "cp ./patch/ast.js ./node_modules/@htmlacademy/php-parser/src/ast.js"
   },
   "dependencies": {
     "@dev/bundle-document": "1.0.1",
     "buffer": "6.0.3",
     "process": "0.11.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-require": "1.1.11"
   },
   "devDependencies": {
     "@originjs/vite-plugin-commonjs": "^1.0.3",
