@@ -47,7 +47,7 @@ const createPIB = (workerPath = defaultWorkerPath) => {
               clearTimeout(pibTimeout);
               pibTimeout = null;
             }
-            pibOutput = '';
+            // pibOutput = '';
             pibStatus = STATUS_IDLE;
           },
         };
@@ -71,7 +71,10 @@ export const createCompilePhp = (workerPath) => {
     }
 
     return new Promise((resolve /*, reject */) => {
-      updatePreview = (phpCode) => resolve(phpCode);
+      updatePreview = (phpCode) => {
+        resolve(phpCode);
+        pibOutput = '';
+      };
 
       const stopWorkerOnTimeout = () => {
         if (pibWorker) {
@@ -87,7 +90,7 @@ export const createCompilePhp = (workerPath) => {
 
         updatePreview(pibOutput);
 
-        pibOutput = '';
+        // pibOutput = '';
         pibTimeout = null;
       };
 

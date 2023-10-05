@@ -22,7 +22,7 @@ function App() {
     bundler.addFile("style.css", "h1 { color: #f06d06; }");
 
     // NOTE: doesn't work without html after code
-    const value = evt.target.value + " ";
+    const value = evt.target.value + "\n";
     bundler.addFile("index.php", value);
 
     const saveBuffer = Buffer;
